@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(x=>
 {
-    x.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog.API", Version = "v1" });
+   // x.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog.API", Version = "v1" });
 
 });
 
@@ -22,8 +22,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(x=>x.SwaggerEndpoint("/swagger/v1/swagger.json","Catalog.API v1"));
 }
 
 app.UseAuthorization();
