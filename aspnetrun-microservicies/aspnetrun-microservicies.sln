@@ -13,11 +13,13 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{6B53BE4E-412C-4BD6-B8C0-4428974F2915}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{F8F240DF-BD95-40E5-BBEB-58E9A70BDC33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{F8F240DF-BD95-40E5-BBEB-58E9A70BDC33}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{AC7DC17C-21BF-4385-893F-D2F9463E073B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.API", "Services\Discount\Discount.API\Discount.API.csproj", "{222CADB2-CC1D-4286-B38D-7FEB01649E3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.API", "Services\Discount\Discount.API\Discount.API.csproj", "{222CADB2-CC1D-4286-B38D-7FEB01649E3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Grpc", "Services\Discount\Discount.Grpc\Discount.Grpc.csproj", "{683700A4-D99A-4DAD-B577-E6AA246079D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{222CADB2-CC1D-4286-B38D-7FEB01649E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{222CADB2-CC1D-4286-B38D-7FEB01649E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{222CADB2-CC1D-4286-B38D-7FEB01649E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{683700A4-D99A-4DAD-B577-E6AA246079D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683700A4-D99A-4DAD-B577-E6AA246079D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683700A4-D99A-4DAD-B577-E6AA246079D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683700A4-D99A-4DAD-B577-E6AA246079D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 		{F8F240DF-BD95-40E5-BBEB-58E9A70BDC33} = {6B53BE4E-412C-4BD6-B8C0-4428974F2915}
 		{AC7DC17C-21BF-4385-893F-D2F9463E073B} = {70938E1F-419E-4BA1-8090-3453B6B699AB}
 		{222CADB2-CC1D-4286-B38D-7FEB01649E3D} = {AC7DC17C-21BF-4385-893F-D2F9463E073B}
+		{683700A4-D99A-4DAD-B577-E6AA246079D8} = {AC7DC17C-21BF-4385-893F-D2F9463E073B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B918390-E71D-49A7-97C1-73341E005D43}
