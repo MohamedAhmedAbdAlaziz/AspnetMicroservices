@@ -1,4 +1,6 @@
 ﻿using Dapper;
+ 
+using Discount.Grpc.Repositories;
 using Discount.Grpc.Entites;
 using Npgsql;
 

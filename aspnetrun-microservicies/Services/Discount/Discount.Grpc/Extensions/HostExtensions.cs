@@ -1,9 +1,7 @@
 ﻿using Npgsql;
 
-namespace Discount.Grpc.Extensions
-{
-
-    namespace Discount.API.Extensions
+ 
+    namespace Discount.Grpc.Extensions
     {
         public static class HostExtensions
         {
@@ -64,4 +62,3 @@ namespace Discount.Grpc.Extensions
             }
         }
     }
-}
