@@ -1,4 +1,5 @@
 ﻿using Discount.Grpc.Protos;
+using Grpc.Core;
 
 namespace Basket.API.GrpcServices
 {
@@ -11,8 +12,19 @@ namespace Basket.API.GrpcServices
         }
         public async Task<CouponModel> GetDiscount(string productName)
         {
-            var discountRequest = new GetDiscountRequest { ProductName = productName };
-            return await _discountProtoService.GetDiscountAsync(discountRequest);
+            try
+            {
+                var discountRequest = new GetDiscountRequest { ProductName = productName };
+                return await _discountProtoService.GetDiscountAsync(discountRequest);
+            
+            }
+    catch (Exception ex)
+    {
+        // Log the exception details
+    
+        throw new RpcException(new Status(StatusCode.Internal, "Internal server error"));
+    }
+
         }
     }
 }
