@@ -4,6 +4,12 @@
     <TargetFramework>net7.0</TargetFramework>
   
     <ImplicitUsings>enable</ImplicitUsings>
+  
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  
+    <DockerfileContext>..\..\..</DockerfileContext>
+  
+    <DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
