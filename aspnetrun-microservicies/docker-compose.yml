@@ -7,6 +7,8 @@ services:
      image: redis:alpine
   discountdb:
     image: postgres
+  orderdb:
+    image: rapidfort/microsoft-sql-server-2019-ib
   pgadmin:
     image: dpage/pgadmin4 
   portainer:
@@ -16,7 +18,7 @@ services:
     build:
       context: .
       dockerfile: Services/Catalog/Catalog.API/Dockerfile
-
+  
   basket.api:
     image: ${DOCKER_REGISTRY-}basketapi
     build:
