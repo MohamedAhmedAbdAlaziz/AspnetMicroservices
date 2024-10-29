@@ -1,10 +1,11 @@
+using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add Ocelot services to the DI container
-builder.Services.AddOcelot();
+builder.Services.AddOcelot().AddCacheManager(s=>s.WithDictionaryHandle());
 
 // Load Ocelot configuration based on the environment
 builder.Configuration.AddJsonFile($"ocelot.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true);
